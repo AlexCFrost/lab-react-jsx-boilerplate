@@ -26,5 +26,22 @@ export default class AppClass extends Component{
     return data;
   }
 
+
+  render(){
+
+    const data = this.imageData();
+
+    return(
+      <div id='grid'>
+      {data.map((el)=>{
+        return ( <div key={el.id}>
+          <img src={el.img}/>
+        </div> )
+      })} 
+      </div>
+    )
+  }
+
+
   // code here
 }
