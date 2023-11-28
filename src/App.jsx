@@ -23,8 +23,21 @@ const imageData = ()=>{
   return data;
 }
 
+
 function App() {
-  // code here
+
+  const data = imageData()
+
+  return(
+    <div id='grid'>
+    {data.map((el)=>{
+      return ( <div key={el.id}>
+        <img src={el.img}/>
+      </div> )
+    })} 
+    </div>
+  )
+
 }
 
 export default App;
