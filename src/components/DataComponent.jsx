@@ -1,4 +1,4 @@
-import React from 'react';
+
 import elephant from '../images/elephant.jpeg';
 
 const DataComponent = ()=> {

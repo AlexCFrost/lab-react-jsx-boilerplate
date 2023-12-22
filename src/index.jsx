@@ -1,15 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import AppClass from "./AppClass";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import DataComponent from './components/DataComponent.jsx'
 
+const data = DataComponent()
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />   
-    <AppClass/>
-    {/* change the above line - for interchaning between App and AppClass */}
-  </React.StrictMode>
-);
+    <h1 style={{
+      textAlign:"center"
+    }}>Kalvium gallary</h1>
+    <div className='gridContainerStyle'>
+      <App id="1" imgUrl={data[0].img}/>
+      <App id="2" imgUrl={data[1].img}/>
+      <App id="3" imgUrl={data[2].img}/>
+      <App id="4" imgUrl={data[3].img}/>
+    </div>
+  </React.StrictMode>,
+)
